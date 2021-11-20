@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="fragment1" type="id"/>
+    <item name="fragment2" type="id"/>
+    <item name="fragment3" type="id"/>
+    <item name="activity_about" type="id"/>
+    <item name="activity_main" type="id"/>
+</resources>

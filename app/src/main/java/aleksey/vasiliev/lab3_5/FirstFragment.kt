@@ -34,26 +34,30 @@ class FirstFragment : Fragment() {
                 Lab3_5Theme {
                     Scaffold(
                         topBar = { TopAppBar(title = { Text("First") }) },
-                        bottomBar = { BottomNavigationBar(activity = requireActivity()) },
-                        content = { Layout() })
+                        bottomBar = {
+                            BottomNavigationBar(activity = requireActivity())
+                        },
+                        content = { Layout() }
+                    )
                 }
             }
+            id = R.id.fragment1
         }
     }
 
     @Composable
     fun Layout() {
-        Column(
-            horizontalAlignment = Alignment.CenterHorizontally,
-            verticalArrangement = Arrangement.Center,
-            modifier = Modifier.fillMaxSize()
-        ) {
-            Button(onClick = {
-                parentFragmentManager.beginTransaction()
-                    .replace(android.R.id.content, SecondFragment()).commit()
-            }) {
-                Text("Second")
+            Column(
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center,
+                modifier = Modifier.fillMaxSize()
+            ) {
+                Button(onClick = {
+                    parentFragmentManager.beginTransaction()
+                        .replace(android.R.id.content, SecondFragment()).commit()
+                }) {
+                    Text("Second")
+                }
             }
-        }
     }
 }

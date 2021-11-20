@@ -27,10 +27,13 @@ class ThirdFragment : Fragment() {
                 Lab3_5Theme {
                     Scaffold(
                         topBar = { TopAppBar(title = { Text("Third") }) },
-                        bottomBar = { Shared.BottomNavigationBar(requireActivity()) },
+                        bottomBar = {
+                            Shared.BottomNavigationBar(requireActivity())
+                        },
                         content = { Layout() })
                 }
             }
+            id = R.id.fragment3
         }
     }
 

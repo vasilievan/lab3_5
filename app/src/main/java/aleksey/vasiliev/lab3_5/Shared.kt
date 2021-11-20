@@ -27,7 +27,7 @@ object Shared {
                 alwaysShowLabel = true,
                 selected = false,
                 onClick = {
-                    activity.startActivity(Intent(activity, About::class.java))
+                    activity.startActivity(Intent(activity, AboutActivity::class.java))
                 }
             )
         }
