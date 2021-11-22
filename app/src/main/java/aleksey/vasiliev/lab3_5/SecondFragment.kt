@@ -44,7 +44,12 @@ class SecondFragment : Fragment() {
             verticalArrangement = Arrangement.Center,
             modifier = Modifier.fillMaxSize()
         ) {
-            Text("First")
+            Button(onClick = {
+                parentFragmentManager.beginTransaction()
+                    .replace(android.R.id.content, FirstFragment()).commit()
+            }) {
+                Text("First")
+            }
             Spacer(modifier = Modifier.height(20.dp))
             Button(onClick = {
                 parentFragmentManager.beginTransaction()

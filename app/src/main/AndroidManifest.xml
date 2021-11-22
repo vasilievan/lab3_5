@@ -23,8 +23,6 @@
         </activity>
 
         <activity
-            android:parentActivityName=".MainActivity"
-            android:launchMode="singleInstance"
             android:name=".AboutActivity" />
     </application>
 

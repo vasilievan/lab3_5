@@ -1,6 +1,5 @@
 package aleksey.vasiliev.lab3_5
 
-import aleksey.vasiliev.lab3_5.Shared.BottomNavigationBar
 import aleksey.vasiliev.lab3_5.ui.theme.Lab3_5Theme
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -22,8 +21,7 @@ class AboutActivity : AppCompatActivity() {
                 setContent {
                     Lab3_5Theme {
                         Scaffold(
-                            topBar = { Text("About")},
-                            bottomBar = { BottomNavigationBar(this@AboutActivity) },
+                            topBar = { TopAppBar(title = { Text("About") }) },
                             content = { Spacer(modifier = Modifier.fillMaxSize()) }
                         )
                     }
@@ -36,9 +34,7 @@ class AboutActivity : AppCompatActivity() {
     @Preview(showBackground = true)
     @Composable
     fun DefaultPreview() {
-        Lab3_5Theme {
-            BottomNavigationBar(this)
-        }
+        Lab3_5Theme {}
     }
 
     override fun onBackPressed() {
